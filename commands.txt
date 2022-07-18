@@ -1,0 +1,23 @@
+# file for some common ansible commands and notes
+
+* ansible all --key-file ~/.ssh/ansible -i Inventory -m ping (used to create a connection to all servers in inventory file... -m for module)
+
+* ansible.cfg is the default ansible config file you specify. you can use it to create default ansible values.... after that the ansible command is shortened to just "ansible all -m ping"
+
+* ansible all --list-hosts (to list all your hosts connected to ansible)
+ 
+* ansible all -m gather_facts (to like scrape and list some info on the servers its connected to.... you can add "--limit ip.add.ress" to limit the results to just one host)
+
+* ansible all -m apt -a update_cache=yes (using the apt module, basically the same as running 'apt update'. it wont work because to run that command you need sudo privileges. to get that, add "--become".... if theres a sudo password, add "--ask-become-pass")
+
+* ansible all -m apt -a name=package --become (to install a package on all your hosts)
+
+* ansible all -m apt -a "name=package state=latest" --become (to upgrade an already existing package.... whenever you have more than one argument, add "".... making "state=absent" removes the package from the server)
+
+* ansible playbooks are made using yaml format
+
+* ansible-playbook playbook_file.yml (to run a playbook)
+
+* 
+
+
