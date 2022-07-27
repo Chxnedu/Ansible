@@ -5,6 +5,7 @@
   pre_tasks:
 
     - name: install updates (Ubuntu)
+      tags: always
       apt:
         update_cache: yes
       when: ansible_distribution == "Ubuntu"
@@ -14,6 +15,7 @@
   tasks:
 
     - name: install apache and php
+      tags: apache,apache2,ubuntu
       apt:
         name:
           - apache2
@@ -26,6 +28,7 @@
   tasks: 
 
     - name: installing mariadb
+      tags: db,mariadb,ubuntu
       apt: 
         name: mariadb-server
         state: latest

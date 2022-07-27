@@ -1,3 +1,6 @@
-172.31.95.111 apache_package=apache2 php_package=libapache2-mod-php
-172.31.88.72 apache_package=apache2 php_package=libapache2-mod-php
+[web_server]
+172.31.95.111
+
+[db_server]
+172.31.88.72
 
