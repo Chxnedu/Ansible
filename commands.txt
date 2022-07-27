@@ -24,4 +24,14 @@
 
 * you can use the 'package' module to install packages when you have various distros  
 
+* you can group hosts in the inventory file. use square braces "[]" to name the group and put the host ip under that group
+
+* using "pre_tasks" instead of "tasks" in your playbook ensures that that play runs first before all the other plays or tasks
+
+* you can use tags in your playbook. add the "tags" object after "name" and list your desired tags.
+
+* ansible-playbook --list-tags file.yml (to list the tags for a particular playbook)
+
+* ansible-playbook --tags tagname file.yml (to run plays only related to a particular tag....use --tags "tagname,tagname" for multiple tags)
+
 * 
