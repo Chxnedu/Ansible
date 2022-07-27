@@ -18,6 +18,10 @@
 
 * ansible-playbook playbook_file.yml (to run a playbook)
 
+* you can use when statements in playbooks for exceptions to different distrubutions. read up about it when you need it
+
+* you can also use variables in your playbooks using curly braces "{{}}"...after declaring the variables, add their values to the inventory file
+
+* you can use the 'package' module to install packages when you have various distros  
+
 * 
-
-
