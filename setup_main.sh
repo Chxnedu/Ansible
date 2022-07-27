@@ -1,5 +1,5 @@
 #! /bin/bash
-# script to setup anible main
+# script to setup ansible main
 
 sudo apt update
 
