@@ -3,6 +3,7 @@
 
 sudo apt update
 
-nano .ssh/authorized_hosts
+nano .ssh/authorized_keys
+
 
 
