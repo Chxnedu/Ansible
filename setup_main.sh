@@ -17,7 +17,7 @@ ssh-keygen
 
 cat .ssh/id_rsa.pub
 
-sleep 400
+sleep 200
 
 git clone git@github.com:Chxnedu/Ansible.git
 
