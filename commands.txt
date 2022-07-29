@@ -44,4 +44,8 @@
 
 * 'register' module can be used to capture a state change as a variable. for example you make a change to a config file and you need another state to run only when you make that change. you can add "register: variable" to the end of the first play then on the subsequent play, add "when: variable.changed"
 
-* 
+* you can use the "user" module to add a user or users to your hosts.
+
+* the "authorized_key" module is used to add ssh keys to the host
+
+
