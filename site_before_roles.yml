@@ -1,0 +1,59 @@
+---
+
+- hosts: all
+  become: true
+  pre_tasks:
+
+    - name: install updates (Ubuntu)
+      tags: always
+      apt:
+        update_cache: yes
+      changed_when: false
+      when: ansible_distribution == "Ubuntu"
+
+
+- hosts: all
+  become: true
+  tasks: 
+
+    - name: add ssh key for chxnedu
+      tags: always
+      authorized_key: 
+        user: chxnedu
+        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCkZaQL3MzZqAQCAzRExmpSirNvyTCFUqOQ6L2GugWmoFBUoaA3AM0FzfdXnQPBWnuM22g1gXXwB7sjCVvdELOg5SBOZUdyzayUQzC878uGl3V23ODZVwOjKYd7i8pI580rvykucBcVzS9H3uK8sm/b5LkTAMsMv51IPQRKahZVtvHk4sYYMSv9cl4RMVg2xrWpunfZZRW8535nnGbZHhsqmbubhs9PuzTOG/gyKiYAflEK8JHRTcmgFN/z4bTGqkTg/EKJx7FPGmj1W7BWN4JqRhZVlReb01Ic+j1dkgRchkN1MPkujnNF78CbW27fNjvpDu962thugFMnCqAPUqjGs1TGv6aLrLfvWboDW/WZt/olGpIQXvns/mMb8lideHrTU5ytAAwyqMYRx1IclJV6oVq2m59oiX3BIWQydVR48vj1ykE/RGRPBnhl79u9yuiefGZuktxoikVmLJNAD09XtwFHs3Z+hbnDaIhjhgFth8RjhGpZ+NGbBBvNAHam83U= ubuntu@ip-172-31-31-128"
+
+
+- hosts: web_server
+  become: true
+  tasks:
+
+    - name: install apache and php
+      tags: apache,apache2,ubuntu
+      apt:
+        name:
+          - apache2
+          - libapache2-mod-php
+        state: latest
+      when: ansible_distribution == "Ubuntu"
+
+    - name: copy default html file for site
+      tags: apache,apache2,ubuntu
+      copy:
+        src: default_site.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: 0644
+
+
+- hosts: db_server
+  become: true
+  tasks: 
+
+    - name: installing mariadb
+      tags: db,mariadb,ubuntu
+      apt: 
+        name: mariadb-server
+        state: latest
+      when: ansible_distribution == "Ubuntu"
+
