@@ -48,4 +48,7 @@
 
 * the "authorized_key" module is used to add ssh keys to the host
 
-
+* when working with roles, you'll have to make some edits to your main playbook. first, in your ansible folder, create a roles directory, and a directory for each of your host group in that directory. in each directory create a tasks directory.
+it should look like this Ansible/roles/web_server/tasks
+then create a main.yml file in each tasks directory... that file should contain all the previous plays for each group.
+ 
