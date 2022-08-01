@@ -52,3 +52,6 @@
 it should look like this Ansible/roles/web_server/tasks
 then create a main.yml file in each tasks directory... that file should contain all the previous plays for each group.
  
+* handlers is a concept you should look into
+
+* also lookup templates
