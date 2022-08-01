@@ -25,8 +25,7 @@
       tags: always
       authorized_key: 
         user: chxnedu
-        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwTziN8IVNxdBFzE6E3fl1L7W2d/U+gDhX48khNBwfQ1GtJF7m9SLf1ifMnC72ncne15tuUHbn7ShsZp29lTPxqapStjTccAE9YeOyorV8dnfjsBP3gph1xTWfsv8ZGnfWFDIZJ87Ea3RVCamvYp5lV9UbwRZL41dJShc2VnoJ/SFhd+A/9GzseUtnYZSwJEBxE/u6sAo8nVkVmMjTok0BcPiw0+NgscwACLLDr27fl1hPjo3IGqLHZlD8hz3kQnIn8FGp5pVLh8ybSjdJH+H9+1NgOyMZwsMu+nRDCB4O/tM41jMnBROpQ2jLKO+yTRgXqmlYD8sqpOkh6xtqfxfcs53uvueJPN6drHf48U73qJi2LU0vUPRSPFpbTffxjBs/t/2zLbrxf3TgNcozV9Pw26KYVY/X1Rvri9ey0Oiw4g35BsDQ1ZCJlbffMcCOrWOEXdQB0I/dZE/z0L3dzLFhNr5T6ZVX509oO9PQkRza2jXXoLLDts9INK5L3vJxyOc= ubuntu@ip-172-31-80-92
-
+        key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDjwQvzQtrvP0iDua5SSqQlNaO6q3tTdZ3TS8hoDcUrJNnDjy+IOCeA2a7Bzioyu+O0cTB2CFCiOEAhdfIqMfZQCRkFtu7h1efgusG6xrGUSYnP++V+xd7bu/y5eyeFKQoThCPTp0Q9uDz8BNEw5vyLd9yvdm7RMfxIQIGjVYMV7FSJPpnFb8qNAhqW7Ex8ZB8eWMXdhBN0LAMZYx521/zPZK0z3zAPAOoJagVZgqbWr4qkLpYAeI3nnGbsBBJWO0XVMp2mk4JPxLdjbrHCL3/ix5MlVenFYMeZxZw2e/9ngWQcnS+OAYHJ44JUWf/G9EQ9AekoNmb/8Rxn9jY1cqUnvztGroLsL7kHdlImdIs4EMG1MNS47SpkJoD5BjZzOaX966r93hKNck2GOlcOYt3tuTKqtwHNLHfMecCIqJXNq5h2UrV1Vazp1ExBpDKsv6hmILXXKnjKZb7LmUtAI5i8avkii+0kszGkEcNZyzt1UthyjKQrDaoJkgZbWrmUODk= ubuntu@ip-172-31-22-81"
 
     - name: add sudoers file for chxnedu
       tags: always

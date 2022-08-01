@@ -2,8 +2,8 @@
       tags: apache,apache2,ubuntu
       apt:
         name:
-          - apache2
-          - libapache2-mod-php
+          - "{{ apache_package_name }}"
+          - "{{ php_package_name }}"
         state: latest
       when: ansible_distribution == "Ubuntu"
 
