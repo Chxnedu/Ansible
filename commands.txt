@@ -55,3 +55,16 @@ then create a main.yml file in each tasks directory... that file should contain 
 * handlers is a concept you should look into
 
 * also lookup templates
+
+* loops are another important concept in ansible. for example;
+tasks:
+   - user:
+       name: '{{ item }}'
+       state: present
+     loop:
+       - joe
+       - chxnedu
+       - kachi
+this replaces the item variable with the names you specified in the loop array
+
+* check out patterns on ansible docs
